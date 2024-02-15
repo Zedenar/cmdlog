@@ -7,6 +7,8 @@ from settings.config import settingslog_path
 from settings.config import timestring
 from settings.config import history_path
 
+#  This script does not get logged.
+
 # Set the path for where the logfiles and directories are stored (can be modified)
 dir_list = os.listdir(settingslog_path)
 username = os.getlogin() + "_"
