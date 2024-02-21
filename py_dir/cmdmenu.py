@@ -1,28 +1,28 @@
 import os
+from rich.console import Console
+console = Console()
 from settings.config import listfiles_path
 from settings.config import logger_path
 from settings.config import readfile_path
 from settings.config import delfile_path
-from settings.config import ClearCommand
 from settings.config import loginlog_path
 from settings.config import searchlog_path
 from listfiles import lslog
 
-os.system(ClearCommand)
-
 menu = {
+    "CmdLog": " ",
     1: "Run a $Bash-command to log.",
     2: "Look at the login-attempts.",
     3: "List the logfiles.",
     4: "Read a file.",
     5: "Search for a keyword within a logfile.",
     6: "Delete a file.",
-    7: "Exit/Quit"
+    "Type": "[Exit] or [Quit] to go back to the terminal\n"
 }
 
 while True:
     for key, value in menu.items():
-        print(key, value)
+        console.print( key, value, justify="left")
 
     selection = input("Please type in a number from the list below. \n #: ")
 
@@ -47,7 +47,7 @@ while True:
         print(lslog)
         os.system(f"python3 {delfile_path}")  # run "py_dir/delfile.py"
 
-    elif selection == '7':
+    elif selection == 'Quit' or "quit" or "QUIT" or "Exit" or "Exit" or "exit":
         print("Have a nice day!")
         break
     else:
