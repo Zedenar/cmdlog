@@ -1,6 +1,8 @@
 import pathlib
 import time
 
+#  Rich Documentation: https://rich.readthedocs.io/en/stable/index.html
+
 #  get the preferred root-directory
 rootdir = pathlib.Path().resolve().parent.joinpath('cmdlog')
 
