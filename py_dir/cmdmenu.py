@@ -47,7 +47,7 @@ while True:
         print(lslog)
         os.system(f"python3 {delfile_path}")  # run "py_dir/delfile.py"
 
-    elif selection == 'Quit' or "quit" or "QUIT" or "Exit" or "Exit" or "exit":
+    elif selection == 'Quit' or "quit" or "QUIT" or "Exit" or "Exit" or "exit" or "E" or "Q":
         print("Have a nice day!")
         break
     else:
