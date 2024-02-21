@@ -38,9 +38,6 @@ loginlog_path = bin_path.joinpath('loginlog.py')               # <-- Check the l
 #  making sure that search_path is a string
 search_path = str(settingslog_path)
 
-#  OS-commands
-ClearCommand = "clear"
-
 #  Set the timeformat for the filenames
 # %Y = Year , %m = month , %d = day , %H = Hour , %M = Minutes , %S = Seconds
 timestring = time.strftime("%Y%m%d-%H.%M.%S")
